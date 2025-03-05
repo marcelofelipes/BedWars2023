@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    api("io.papermc:paperlib:1.0.8")
+    api("io.papermc:paperlib:1.0.8-SNAPSHOT")
     api("org.bstats:bstats-bukkit:3.0.2")
     implementation("com.iridium:IridiumColorAPI:1.0.9") // used by BedWars - API
     implementation("org.apache.commons:commons-lang3:3.14.0") // Used by IridiumColorAPI
