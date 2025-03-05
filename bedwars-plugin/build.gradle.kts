@@ -12,7 +12,7 @@ repositories {
     mavenCentral()
     mavenLocal()
     // Important Repos
-    maven("https://papermc.io/repo/repository/maven-public/") // PaperLib
+    maven("https://repo.papermc.io/repository/maven-public/") // PaperLib
     maven("https://repo.codemc.io/repository/nms/") // Spigot
     maven("https://repo.codemc.io/repository/maven-public/") // VipFeatures
     maven("https://simonsator.de/repo/") // Party-and-Friends-MySQL-Edition-Spigot-API, Spigot-Party-API-For-RedisBungee
@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    api("io.papermc:paperlib:1.0.8")
+    api("io.papermc:paperlib:1.0.8-SNAPSHOT")
     api("org.bstats:bstats-bukkit:3.0.2")
     implementation("com.iridium:IridiumColorAPI:1.0.9") // used by BedWars - API
     implementation("org.apache.commons:commons-lang3:3.14.0") // Used by IridiumColorAPI
