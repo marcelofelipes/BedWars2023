@@ -2,7 +2,7 @@ name: Deploy package to BedWars Repo + Create a release
 
 on:
   push:
-    branches: [production, workflow-test]
+    branches: [production, workflow-test,development,1.21-support]
 
 jobs:
   create-jar:
