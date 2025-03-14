@@ -53,7 +53,7 @@ jobs:
         run: |
           echo "Generated Tag: ${{ needs.create-jar.outputs.version }}"
       - name: Create release
-        id: "release.${{ needs.create-jar.outputs.version }}"
+        id: "release"
         uses: softprops/action-gh-release@v2
         with:
           target_commitish: production
