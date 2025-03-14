@@ -1,4 +1,4 @@
-# Contributing to BedWars2023
+;;# Contributing to BedWars2023
 👍 First off, thanks for taking the time to contribute!
 
 The following is a set of guidelines for contributing to BedWars2023. 
