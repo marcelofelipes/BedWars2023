@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: 'production'
+          ref: 'development'
           fetch-depth: 0 # Fetch all history and tags
       - name: Set up JDK 21
         uses: actions/setup-java@v4
@@ -30,7 +30,7 @@ jobs:
       - name: Set version
         id: set-version
         run: |
-          VERSION=$(gradle printTag | awk '/Generated Tag:/ {print $3}')
+          VERSION=$(gradle printTag | awk '/Generated Tag:/ {print $3}.${{ steps.set-version.outputs.version }}')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
@@ -53,7 +53,7 @@ jobs:
         run: |
           echo "Generated Tag: ${{ needs.create-jar.outputs.version }}"
       - name: Create release
-        id: release
+        id: "release.${{ needs.create-jar.outputs.version }}"
         uses: softprops/action-gh-release@v2
         with:
           target_commitish: production
